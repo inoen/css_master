@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@supports (display: grid) {
+  .conain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 150px 230px; } }
+
+/* Mixin */
+body {
+  background: #fff;
+  font-family: 'Patua One', cursive; }
+
+main {
+  padding: 15px;
+  background: #fdfdf9; }
+
+section {
+  background: #f0f0ed; }
+
+/*--------header---------*/
+.headline {
+  font-size: 20px;
+  color: #444; }
+  .headline p {
+    font-size: 17px;
+    color: #585858; }
+
+.headline2 {
+  font-size: 15px;
+  color: #5a4709; }
+  .headline2 h2 {
+    border-bottom: 2px solid #000; }
+    .headline2 h2:before {
+      content: '■'; }
+  .headline2 p {
+    font-size: 14px;
+    color: #755c0c; }
+
+.allbox {
+  width: 500px;
+  height: 600px;
+  border: 11px solid #000; }
+
+.pad {
+  width: 400px;
+  height: 100%;
+  border: 10px solid #777; }
+
+.pad1 {
+  width: 100%;
+  height: 100px;
+  border: 11px solid #ddd; }
+
+.p10 {
+  width: 100%;
+  padding-top: 0;
+  background: #ab7788;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.p5 {
+  width: 50%;
+  padding-top: 50%;
+  background: #77aa77;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.item, .item2 {
+  width: 100px;
+  height: 100px;
+  background: #556c5c;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flex_details {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: #fa84a9; }
+
+.grid10 {
+  height: 500px;
+  width: 480px; }
+
+.item2 {
+  width: 35px;
+  height: 25px;
+  margin-right: 5px; }
+
+.flex_details div:nth-child(odd) {
+  background-color: #ffc6fe;
+  animation: foo 2s 0s, bar 1s 0s; }
+
+.flex_details div:nth-child(even) {
+  background-color: #a75871; }
+
+.contain div:nth-child(odd) {
+  background: #aad8b8; }
+
+.ov {
+  overflow: auto; }
+
+.ov1 {
+  overflow: visible; }
+
+@keyframes foo {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes bar {
+  0% {
+    transform: translateX(-100px); }
+  100% {
+    transform: translateX(0px); } }
+
+.grid02 {
+  animation: foo 2s 0s, bar 1s 0s; }
+
+.grid03 {
+  display: flex;
+  align-items: flex-end; }
