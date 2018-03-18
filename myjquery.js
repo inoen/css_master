@@ -14,15 +14,3 @@ $(function(){
       return false;
    });
 });
-if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
-  $(function() {
-    $('address').each(function() {
-      var str = $(this).html();
-      if ($(this).children().is('img')) {
-        $(this).html($('<a>').attr('href', 'tel:' + $(this).children().attr('alt').replace(/-/g, '')).append(str + '</a>'));
-      } else {
-        $(this).html($('<a>').attr('href', 'tel:' + $(this).text().replace(/-/g, '')).append(str + '</a>'));
-      }
-    });
-  });
-}
