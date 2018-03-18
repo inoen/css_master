@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link rel="stylesheet" href="css.css">
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="myjquery.js"></script>
+
     <title>css mster</title>
 </head>
 <body>
@@ -12,10 +16,24 @@
         <h1>Css Master</h1>
         <p>cssとSaasを学ぶ</p>
     </div>
+    <nav>
+        <input type="checkbox" name="" id="menu">
+        <label for="menu">Menu</label>
+        <div class="menu">
+            <ul>
+                <li><a href="#1">witdh height padding</a></li>
+                <li><a href="#2">margin</a></li>
+                <li><a href="#3">Flexbox</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+    </nav>
     </header>
     <main>
     <section>
-    <div class="headline2">
+    <div class="headline2" id="1">
         <h2>witdh height padding</h2>
         <p>ルールを理解する。</p>
     </div>
@@ -32,7 +50,7 @@
         </div>
     </section>
 <section>
-        <div class="headline2">
+        <div class="headline2" id="2">
             <h2>margin</h2>
             <p>flexbox</p>
         </div>
@@ -47,8 +65,8 @@
             <div class="item grid06"></div>
         </div>
     </section>
-    <div class=" grid10">
-        <div class="headline2">
+    <section class=" grid10">
+        <div class="headline2" id="3">
             <h2>Flexbox- align-content:space-between;</h2>
             <p>flexbox</p>
         </div>
@@ -91,7 +109,7 @@
             <div class="item2"></div>
             <div class="item2"></div>
         </div>
-    </div>
+    </section>
     </main>
 </body>
 </html>

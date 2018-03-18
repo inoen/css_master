@@ -24,10 +24,13 @@ $mcolor: #556c5c;
     align-items: center;
 }
 
-@mixin headline($fs:24px, $pfs:13px, $hcolor:#000){
+@mixin headline($fs:24px, $pfs:13px, $hcolor:#000, $p:p){
+    #{$p}{
         font-size: $fs;
         color: $hcolor;
-    p{
+        margin: 0;
+    }
+        p{
         font-size: $pfs;
         color: $hcolor*1.3;
     }
@@ -37,17 +40,68 @@ body{
     background: #fff;
     font-family: 'Patua One', cursive;
 }
+.menu{
+    padding: 0 10px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 2s;
+}
+
+nav{
+position: absolute;
+    right: 10%;
+        background-color: rgba(255, 255, 255,0.5);
+    border-bottom: 3px solid #888;
+        box-shadow: 1px 2px 3px rgba(110,60,0,0.2);
+    ul{
+        list-style-type: none;
+    }
+    a{
+        display: block;
+    }
+    label{
+        background: url(img/like.png)  no-repeat left center;
+        display: block;
+        cursor: pointer;
+         padding: 0px 0 0px 50px;
+        font-size: 33px;
+    }
+}
+input{
+    &#menu{
+        display: none;
+    }
+    &:checked +label {
+    background-image: url(img/like1.png);
+        }
+    &:checked {
+        ~.menu{
+        height: auto;
+        opacity: 1;
+        }
+        ~nav{
+            padding-bottom: 3px;
+        }
+    }
+}
 
 main{
     padding: 15px;
     background: #fdfdf9;
+     animation: foo 2s 0s, bar 1s 0s;
 }
 section{
     background: #fdfdf9*0.95;
+    margin-top: 110px;
 }
 /*--------header---------*/
+header{
+    display: flex;
+}
+
 .headline{
-    @include headline(20px,17px,#444)}
+    @include headline(33px,17px,#444,h1)}
 
 .headline2{
     h2{
@@ -56,7 +110,7 @@ section{
             content: '■';
         }
     }
-    @include headline(15px,14px,#5a4709)}
+    @include headline(28px,14px,#5a4709,h2)}
 
 .allbox{
     @include wh(500px,600px);
@@ -89,7 +143,7 @@ section{
 }
 
 .flex_details{
-    align-content:space-between;
+    align-content:flex-end;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
