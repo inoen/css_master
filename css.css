@@ -50,7 +50,7 @@ input:checked ~ nav {
 main {
   padding: 15px;
   background: #fdfdf9;
-  animation: foo 2s 0s, bar 1s 0s; }
+  animation: foo 1s 0s, bar 1s 0s; }
 
 section {
   background: #f0f0ed;
@@ -130,13 +130,9 @@ header {
   align-content: flex-end;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  background-color: #fa84a9; }
-
-.grid10 {
   height: 500px;
-  width: 480px; }
+  width: 480px;
+  background-color: #fa84a9; }
 
 .item2 {
   width: 35px;
@@ -174,6 +170,6 @@ header {
 .grid02 {
   animation: foo 2s 0s, bar 1s 0s; }
 
-.grid03 {
+.grid03 .grid04 {
   display: flex;
-  align-items: flex-end; }
+  align-items: flex-start; }
