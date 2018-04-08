@@ -8,21 +8,21 @@
 /* Mixin */
 body {
   background: #fff;
-  font-family: 'Patua One', cursive; }
+  font-family: 'Patua One', cursive;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden; }
 
 .menu {
-  padding: 0 10px;
-  height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: 2s; }
+  transition: 2s;
+  position: relative;
+  right: -800px; }
 
 nav {
-  position: absolute;
-  right: 10%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 3px solid #888;
-  box-shadow: 1px 2px 3px rgba(110, 60, 0, 0.2); }
+  margin-left: auto;
+  height: 0; }
   nav ul {
     list-style-type: none; }
   nav a {
@@ -32,20 +32,27 @@ nav {
     display: block;
     cursor: pointer;
     padding: 0px 0 0px 50px;
-    font-size: 33px; }
+    font-size: 33px;
+    width: 170px; }
 
 input#menu {
   display: none; }
+  input#menu:checked + label {
+    background-image: url(img/like1.png);
+    background-position: top 3px left; }
+  input#menu:checked ~ .menu {
+    height: auto;
+    opacity: 1;
+    right: 0;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid #888;
+    box-shadow: 1px 2px 3px rgba(110, 60, 0, 0.2); }
+  input#menu:checked ~ p {
+    border-bottom: 2px solid #000; }
 
-input:checked + label {
-  background-image: url(img/like1.png); }
-
-input:checked ~ .menu {
-  height: auto;
-  opacity: 1; }
-
-input:checked ~ nav {
-  padding-bottom: 3px; }
+h2 ~ p {
+  border-bottom: 2px solid #000; }
 
 main {
   padding: 15px;
